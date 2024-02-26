@@ -1,13 +1,13 @@
 import { ReactNode } from 'react'
 import { Inter as FontSans } from 'next/font/google'
 
-import { ThemeProvider } from '@/components/theme-provider'
 import '@/styles/globals.css'
 
 import { cn } from '@/lib/utils'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Cmdk } from '@/components/cmdk'
+import { ThemeProvider } from '@/providers/theme-provider'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
