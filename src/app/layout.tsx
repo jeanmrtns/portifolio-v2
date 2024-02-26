@@ -7,6 +7,7 @@ import '@/styles/globals.css'
 import { cn } from '@/lib/utils'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { Cmdk } from '@/components/cmdk'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -35,7 +36,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <div className="min-h-screen flex flex-col justify-between items-center">
             <Header />
-            {children}
+
+            <div>
+              {children}
+              <Cmdk />
+            </div>
+
             <Footer />
           </div>
         </ThemeProvider>
