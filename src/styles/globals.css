@@ -136,7 +136,7 @@
   }
 
   [cmdk-item][data-selected='true'] {
-    background: var(--grayA3);
+    background: #FFFFFF55;
     color: var(--gray12);
   }
 
@@ -160,9 +160,9 @@
   }
 
   [cmdk-list] {
-    height: min(330px, calc(var(--cmdk-list-height)));
-    max-height: 400px;
-    overflow: auto;
+    height: min(400px, calc(var(--cmdk-list-height)));
+    max-height: 500px;
+    /* overflow: auto; */
     overscroll-behavior: contain;
     transition: 100ms ease;
     transition-property: height;
