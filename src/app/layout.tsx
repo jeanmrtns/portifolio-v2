@@ -1,14 +1,16 @@
-import { ReactNode } from "react"
-import { Inter as FontSans } from "next/font/google"
+import { ReactNode } from 'react'
+import { Inter as FontSans } from 'next/font/google'
 
-import { ThemeProvider } from "@/components/theme-provider"
-import "@/styles/globals.css"
+import { ThemeProvider } from '@/components/theme-provider'
+import '@/styles/globals.css'
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+  subsets: ['latin'],
+  variable: '--font-sans',
 })
 
 interface RootLayoutProps {
@@ -21,17 +23,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          'min-h-screen bg-background font-sans antialiased',
+          fontSans.variable,
         )}
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        { children }
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen flex flex-col justify-between items-center">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
