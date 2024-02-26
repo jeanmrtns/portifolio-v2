@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -9,67 +9,223 @@
 
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
- 
+
     --primary: 240 5.9% 10%;
     --primary-foreground: 0 0% 98%;
- 
+
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
- 
+
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
- 
+
     --accent: 240 4.8% 95.9%;
     --accent-foreground: 240 5.9% 10%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
- 
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
- 
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
- 
+
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
- 
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
- 
+
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
- 
+
     --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
- 
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
+
+  [cmdk-root] {
+    max-width: 640px;
+    width: 100%;
+    padding: 8px;
+    background: #00000099;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: #00000054;
+    border: 1px solid #00000054;
+    box-shadow: #00000054;
+    transition: transform 100ms ease;
+    outline: none;
+
+  }
+
+  [cmdk-root].dark {
+    background: rgba(22, 22, 22, 0.7);
+  }
+
+  [cmdk-input] {
+    font-family: #00000054;
+    border: none;
+    width: 100%;
+    font-size: 17px;
+    padding: 8px 8px 16px 8px;
+    outline: none;
+    background: #00000054;
+    color: #FFF;
+    border-bottom: 1px solid #00000054;
+    margin-bottom: 16px;
+    border-radius: 0;
+  }
+
+  [cmdk-input]::placeholder {
+    color: #00000054;
+  }
+
+  [cmdk-vercel-badge] {
+    height: 20px;
+    background: #00000054;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #00000054;
+    border-radius: 4px;
+    margin: 4px 0 4px 4px;
+    user-select: none;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
+  [cmdk-item] {
+    content-visibility: auto;
+
+    cursor: pointer;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    color: var(--gray11);
+    user-select: none;
+    will-change: background, color;
+    transition: all 150ms ease;
+    transition-property: none;
+  }
+
+  [cmdk-item][data-selected='true'] {
+    background: var(--grayA3);
+    color: var(--gray12);
+  }
+
+  [cmdk-item][data-disabled='true'] {
+    color: var(--gray8);
+    cursor: not-allowed;
+  }
+
+  [cmdk-item]:active {
+    transition-property: background;
+    background: var(--gray4);
+  }
+
+  [cmdk-item]+[cmdk-item] {
+    margin-top: 4px;
+  }
+
+  [cmdk-item] svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  [cmdk-list] {
+    height: min(330px, calc(var(--cmdk-list-height)));
+    max-height: 400px;
+    overflow: auto;
+    overscroll-behavior: contain;
+    transition: 100ms ease;
+    transition-property: height;
+  }
+
+  [cmdk-vercel-shortcuts] {
+    display: flex;
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  [cmdk-vercel-shortcuts] kbd {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    min-width: 20px;
+    padding: 4px;
+    height: 20px;
+    border-radius: 4px;
+    color: var(--gray11);
+    background: var(--gray4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  [cmdk-separator] {
+    height: 1px;
+    width: 100%;
+    background: var(--gray5);
+    margin: 4px 0;
+  }
+
+  *:not([hidden])+[cmdk-group] {
+    margin-top: 8px;
+  }
+
+  [cmdk-group-heading] {
+    user-select: none;
+    font-size: 12px;
+    color: var(--gray11);
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  [cmdk-empty] {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    white-space: pre-wrap;
+    color: var(--gray11);
+  }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
