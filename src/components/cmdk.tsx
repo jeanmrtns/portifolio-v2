@@ -1,4 +1,5 @@
 'use client'
+import { motion } from 'framer-motion'
 
 import { Command } from 'cmdk'
 import { Home, LampWallDown, Paperclip, User2Icon } from 'lucide-react'
@@ -27,7 +28,14 @@ export function Cmdk() {
   return (
     <div className="mr-20">
       {pathname === '/' ? (
-        <label htmlFor="homeCmdk" onClick={handleOpenCmdk}>
+        <motion.label
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ ease: 'easeInOut', duration: 0.75 }}
+          htmlFor="homeCmdk"
+          onClick={handleOpenCmdk}
+        >
           Press{' '}
           <kbd className="bg-primary rounded px-2 py-2 text-zinc-300 dark:text-zinc-900">
             ctrl
@@ -37,7 +45,7 @@ export function Cmdk() {
             K
           </kbd>{' '}
           to start →
-        </label>
+        </motion.label>
       ) : null}
       <Command.Dialog
         id="homeCmdk"
@@ -51,7 +59,7 @@ export function Cmdk() {
         <Command.List className="">
           <Command.Empty>No results found.</Command.Empty>
 
-          <Command.Group heading="Go to">
+          <Command.Group heading="Go to" className="text-primary">
             <Command.Item>
               <Link className="flex items-center gap-2" href="/">
                 <Home className="h-4 w-4" />

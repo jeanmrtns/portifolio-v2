@@ -128,7 +128,7 @@
     align-items: center;
     gap: 8px;
     padding: 0 16px;
-    color: var(--gray11);
+    color: #FFF;
     user-select: none;
     will-change: background, color;
     transition: all 150ms ease;
