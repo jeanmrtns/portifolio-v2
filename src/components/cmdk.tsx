@@ -11,8 +11,6 @@ export function Cmdk() {
   const pathname = usePathname()
   const [isCmdkOpen, setIsCmdkOpen] = useState(false)
 
-  const handleOpenCmdk = () => setIsCmdkOpen(true)
-
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
@@ -34,8 +32,7 @@ export function Cmdk() {
           exit={{ opacity: 0 }}
           transition={{ ease: 'easeInOut', duration: 0.75 }}
           htmlFor="homeCmdk"
-          onClick={handleOpenCmdk}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center gap-2 z-[1000]"
         >
           Press{' '}
           <kbd className="bg-primary rounded px-2 py-2 text-zinc-300 dark:text-zinc-900">
@@ -57,30 +54,46 @@ export function Cmdk() {
       >
         <Command.Input />
 
-        <Command.List className="">
+        <Command.List>
           <Command.Empty>No results found.</Command.Empty>
 
           <Command.Group heading="Go to" className="text-primary">
             <Command.Item>
-              <Link className="flex items-center gap-2" href="/">
+              <Link
+                className="flex items-center gap-2"
+                href="/"
+                onClick={() => setIsCmdkOpen(false)}
+              >
                 <Home className="h-4 w-4" />
                 Home
               </Link>
             </Command.Item>
             <Command.Item>
-              <Link className="flex items-center gap-2" href="/about">
+              <Link
+                className="flex items-center gap-2"
+                href="/about"
+                onClick={() => setIsCmdkOpen(false)}
+              >
                 <User2Icon className="h-4 w-4" />
                 About
               </Link>
             </Command.Item>
             <Command.Item>
-              <Link className="flex items-center gap-2" href="/projects">
+              <Link
+                className="flex items-center gap-2"
+                href="/projects"
+                onClick={() => setIsCmdkOpen(false)}
+              >
                 <LampWallDown className="h-4 w-4" />
                 Projects
               </Link>
             </Command.Item>
             <Command.Item>
-              <Link className="flex items-center gap-2" href="/career">
+              <Link
+                className="flex items-center gap-2"
+                href="/career"
+                onClick={() => setIsCmdkOpen(false)}
+              >
                 <Paperclip className="h-4 w-4" />
                 Career
               </Link>
