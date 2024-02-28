@@ -1,3 +1,10 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Jean Martins - Minha tragetória profissional',
+  description: 'Histórico profissional em desenvolvimento de softwares.',
+}
+
 export default function Career() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-2">

@@ -8,11 +8,17 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Cmdk } from '@/components/cmdk'
 import { ThemeProvider } from '@/providers/theme-provider'
+import { Metadata } from 'next'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
 })
+
+export const metadata: Metadata = {
+  title: 'Jean Martins',
+  description: 'Desenvolvedor de Softwares',
+}
 
 interface RootLayoutProps {
   children: ReactNode

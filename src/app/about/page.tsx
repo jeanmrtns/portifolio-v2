@@ -1,4 +1,10 @@
 import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Jean Martins - Sobre mim',
+  description: 'História e conquistas.',
+}
 
 export default function About() {
   return (
