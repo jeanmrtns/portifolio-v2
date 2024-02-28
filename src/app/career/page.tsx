@@ -1,89 +1,83 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Jean Martins - Minha tragetória profissional',
-  description: 'Histórico profissional em desenvolvimento de softwares.',
+  title: 'Jean Martins - My Professional Journey',
+  description: 'Professional history in software development.',
 }
 
 export default function Career() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-2">
       <h1 className="text-4xl font-bold leading-relaxed">
-        Meu histórico profissional:
+        My professional history:
       </h1>
 
       <ul className="mt-4 flex flex-col gap-6">
         <li>
           <strong className="text-primary text-xl">
             - Pluginbot{' '}
-            <span className="text-primary text-base">(10-2023 até agora)</span>
+            <span className="text-primary text-base">(10-2023 to present)</span>
           </strong>
           <p className="leading-relaxed">
-            Atuei no desenvolvimento de aplicações móveis em React Native
-            voltadas a reconhecimentos facial e biométrico e também auxiliei na
-            manutenção e desenvolvimento de novas features na plataforma de
-            gestão da empresa tanto no Back-end quanto no Front-end utilizando
-            NestJS e Angular, respectivamente.
+            I worked on the development of mobile applications in React Native
+            focused on facial and biometric recognition and also assisted in the
+            maintenance and development of new features on the company&apos;s
+            management platform both on the Back-end and Front-end using NestJS
+            and Angular, respectively.
           </p>
         </li>
 
         <li>
           <strong className="text-primary text-xl">
             - Udooku LLC{' '}
-            <span className="text-primary text-base">
-              (05-2022 até 01-2024)
-            </span>
+            <span className="text-primary text-base">(05-2022 to 01-2024)</span>
           </strong>
           <p className="leading-relaxed">
-            Contribuí com interfaces atrativas, codificando com HTML5, CSS3,
-            JavaScript, React, TypeScript, NextJS, bem como API com Twilio e
-            GCP.
+            I contributed with attractive interfaces, coding with HTML5, CSS3,
+            JavaScript, React, TypeScript, NextJS, as well as API with Twilio
+            and GCP.
           </p>
           <p className="leading-relaxed">
-            Implementei designs responsivos e colaborei na integração com APIs.
-            Trabalhei em equipe, explorei novas tecnologias e busquei
-            constantemente aprender e crescer na área.
+            I implemented responsive designs and collaborated on API
+            integration. I worked in a team, explored new technologies, and
+            constantly sought to learn and grow in the field.
           </p>
         </li>
 
         <li>
           <strong className="text-primary text-xl">
             - EasyQuant BR{' '}
-            <span className="text-primary text-base">
-              (02-2022 até 06-2022)
-            </span>
+            <span className="text-primary text-base">(02-2022 to 06-2022)</span>
           </strong>
           <p className="leading-relaxed">
-            Fui responsável pelo desenvolvimento e manutenção de sistemas
-            focados na área de investimentos, otimizando a experiência dos
-            clientes na bolsa de valores.
+            I was responsible for the development and maintenance of systems
+            focused on the investment area, optimizing the experience of clients
+            in the stock market.
           </p>
           <p className="leading-relaxed">
-            No Frontend, utilizei ReactJS em conjunto com Redux e Material UI
-            para criar interfaces modernas e interativas, garantindo uma
-            experiência de usuário aprimorada.
+            On the Frontend, I used ReactJS in conjunction with Redux and
+            Material UI to create modern and interactive interfaces, ensuring an
+            enhanced user experience.
           </p>
           <p className="leading-relaxed">
-            Já no Backend, trabalhei com NodeJS utilizando o framework ExpressJS
-            para construir uma base sólida e eficiente. Além disso, utilizei o
-            MongoDB como banco de dados, assegurando a manipulação e
-            armazenamento seguro de informações essenciais.
+            In the Backend, I worked with NodeJS using the ExpressJS framework
+            to build a solid and efficient base. In addition, I used MongoDB as
+            a database, ensuring the manipulation and secure storage of
+            essential information.
           </p>
         </li>
 
         <li>
           <strong className="text-primary text-xl">
             - Dr. Propaganda{' '}
-            <span className="text-primary text-base">
-              (10-2021 até 02-2022)
-            </span>
+            <span className="text-primary text-base">(10-2021 to 02-2022)</span>
           </strong>
           <p className="leading-relaxed">
-            Participando do desenvolvimento do sistema de administração para
-            anúncios e propagandas. Utilizei PHP, HTML5, CSS3, Bootstrap e MySQL
-            para criar uma plataforma intuitiva e responsiva. Colaborando em
-            equipe, adquiri conhecimentos valiosos e fortaleci minhas
-            habilidades em desenvolvimento web.
+            Participating in the development of the administration system for
+            advertisements and promotions. I used PHP, HTML5, CSS3, Bootstrap,
+            and MySQL to create an intuitive and responsive platform.
+            Collaborating in a team, I acquired valuable knowledge and
+            strengthened my web development skills.
           </p>
         </li>
       </ul>

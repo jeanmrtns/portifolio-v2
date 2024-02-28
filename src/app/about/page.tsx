@@ -22,34 +22,35 @@ export default function About() {
 
       <div className="flex flex-col gap-2 mt-6 lg:mt-0">
         <strong className="text-3xl text-center leading-relaxed lg:text-left">
-          Aqui está um <span className="border-b border-red-500">pouco</span>{' '}
-          sobre minha história
+          Here is a <span className="border-b border-red-500">little bit</span>{' '}
+          about my history
         </strong>
         <p className="leading-relaxed">
-          Olá, prazer! Sou Desenvolvedor FullStack há mais de 2 anos e formado
-          em Ciência da Computação na PUC. Iniciei no mundo da tecnologia a
-          partir da faculdade e desde então estou focado 100% na área. Meu foco
-          de atuação está sendo no desenvolvimento sistemas web, tanto em
-          front-end quanto em back-end. Pela faculdade participei de Iniciação
-          Científica voltada para a captação de energia renovável e montagem do
-          sistema de gerenciamento das usinas, o que me fez me apaixonar ainda
-          mais pelo desenvolvimento de software (que já era muito grande rs).
+          Hello, nice to meet you! I have been a FullStack Developer for over 2
+          years and graduated in Computer Science at PUC. I started in the world
+          of technology from college and since then I am 100% focused on the
+          area. My focus of action is on the development of web systems, both on
+          the front-end and back-end. Through college, I participated in
+          Scientific Initiation aimed at capturing renewable energy and
+          assembling the management system of the plants, which made me fall
+          even more in love with software development (which was already very
+          big haha).
         </p>
         <p className="leading-relaxed">
-          Hoje atuo como desenvolvedor Full-Stack pela @Pluginbot, desenvolvendo
-          sistemas web, aplicações móveis com integrações com várias SDKs de
-          terceiros, e também ajudo os outros desenvolvedores com suas questões
-          e também a aprender sobre as tecnologias.
+          Today I work as a Full-Stack developer at @Pluginbot, developing web
+          systems, mobile applications with integrations with various
+          third-party SDKs, and I also help other developers with their
+          questions and also to learn about the technologies.
         </p>
         <p className="leading-relaxed">
-          As principais tecnologias que atuo hoje são: React Native, Kotlin/Java
-          (nativo), NestJS e Angular, porém nos meus tempos livres estou
-          mergulhando no mundo de C#.
+          The main technologies I work with today are: React Native, Kotlin/Java
+          (native), NestJS and Angular, however in my free time I am diving into
+          the world of C#.
         </p>
         <p className="leading-relaxed">
-          Sou comprometido com minhas atividades e busco sempre resolver
-          problemas da forma mais eficiente possível. Gosto de ouvir músicas,
-          jogar e assistir filmes/séries quando dá =)
+          I am committed to my activities and always seek to solve problems in
+          the most efficient way possible. I like to listen to music, play
+          games, and watch movies/series when I can =)
         </p>
       </div>
     </main>
