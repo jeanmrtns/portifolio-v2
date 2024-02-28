@@ -26,7 +26,7 @@ export function Cmdk() {
   }, [])
 
   return (
-    <div className="mr-20">
+    <div>
       {pathname === '/' ? (
         <motion.label
           initial={{ opacity: 0 }}
@@ -35,6 +35,7 @@ export function Cmdk() {
           transition={{ ease: 'easeInOut', duration: 0.75 }}
           htmlFor="homeCmdk"
           onClick={handleOpenCmdk}
+          className="flex items-center justify-center"
         >
           Press{' '}
           <kbd className="bg-primary rounded px-2 py-2 text-zinc-300 dark:text-zinc-900">
