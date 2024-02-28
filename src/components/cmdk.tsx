@@ -2,13 +2,11 @@
 
 import { Command } from 'cmdk'
 import { Home, LampWallDown, Paperclip, User2Icon } from 'lucide-react'
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export function Cmdk() {
-  const { theme } = useTheme()
   const pathname = usePathname()
   const [isCmdkOpen, setIsCmdkOpen] = useState(false)
 
@@ -31,15 +29,11 @@ export function Cmdk() {
       {pathname === '/' ? (
         <label htmlFor="homeCmdk" onClick={handleOpenCmdk}>
           Press{' '}
-          <kbd
-            className={`bg-primary rounded px-2 py-2 ${theme === 'dark' ? 'text-zinc-900' : 'text-zinc-300'}`}
-          >
+          <kbd className="bg-primary rounded px-2 py-2 text-zinc-300 dark:text-zinc-900">
             ctrl
           </kbd>{' '}
           +{' '}
-          <kbd
-            className={`bg-primary rounded px-2 py-2  ${theme === 'dark' ? 'text-zinc-900' : 'text-zinc-300'}`}
-          >
+          <kbd className="bg-primary rounded px-2 py-2 text-zinc-300 dark:text-zinc-900">
             K
           </kbd>{' '}
           to start →
