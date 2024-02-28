@@ -2,19 +2,20 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <main className="md:flex items-center gap-6 max-w-5xl">
+    <main className="flex lg:flex-row flex-col items-center gap-6 max-w-6xl px-4 py-2">
       <div>
         <Image
           src="https://github.com/jeanmrtns.png"
           alt="Jean Martins"
-          className="rounded-full"
+          className="rounded-full mx-auto"
           width={2000}
+          priority
           height={2000}
         />
       </div>
 
-      <div className="flex flex-col gap-2">
-        <strong className="text-3xl">
+      <div className="flex flex-col gap-2 mt-6 lg:mt-0">
+        <strong className="text-3xl text-center leading-relaxed lg:text-left">
           Aqui está um <span className="border-b border-red-500">pouco</span>{' '}
           sobre minha história
         </strong>
