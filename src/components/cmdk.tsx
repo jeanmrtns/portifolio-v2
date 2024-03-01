@@ -32,7 +32,8 @@ export function Cmdk() {
           exit={{ opacity: 0 }}
           transition={{ ease: 'easeInOut', duration: 0.75 }}
           htmlFor="homeCmdk"
-          className="flex items-center justify-center gap-2 z-[1000]"
+          className="flex items-center justify-center gap-2 z-[99999999]"
+          onClick={() => setIsCmdkOpen(true)}
         >
           Press{' '}
           <kbd className="bg-primary rounded px-2 py-2 text-zinc-300 dark:text-zinc-900">
