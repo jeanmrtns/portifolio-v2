@@ -4,12 +4,20 @@ import { motion } from 'framer-motion'
 import { Command } from 'cmdk'
 import { Home, LampWallDown, Paperclip, User2Icon } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 export function Cmdk() {
   const pathname = usePathname()
   const [isCmdkOpen, setIsCmdkOpen] = useState(false)
+  const router = useRouter()
+
+  const handleRedirect = (url: string) => {
+    const isHome = url === 'home'
+    const urlPath = isHome ? '' : url
+    setIsCmdkOpen(false)
+    router.push(isHome ? '/' : `/${urlPath}`)
+  }
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -59,7 +67,7 @@ export function Cmdk() {
           <Command.Empty>No results found.</Command.Empty>
 
           <Command.Group heading="Go to" className="text-primary">
-            <Command.Item>
+            <Command.Item onSelect={handleRedirect}>
               <Link
                 className="flex items-center gap-2"
                 href="/"
@@ -69,7 +77,7 @@ export function Cmdk() {
                 Home
               </Link>
             </Command.Item>
-            <Command.Item>
+            <Command.Item onSelect={handleRedirect}>
               <Link
                 className="flex items-center gap-2"
                 href="/about"
@@ -79,7 +87,7 @@ export function Cmdk() {
                 About
               </Link>
             </Command.Item>
-            <Command.Item>
+            <Command.Item onSelect={handleRedirect}>
               <Link
                 className="flex items-center gap-2"
                 href="/projects"
@@ -89,7 +97,7 @@ export function Cmdk() {
                 Projects
               </Link>
             </Command.Item>
-            <Command.Item>
+            <Command.Item onSelect={handleRedirect}>
               <Link
                 className="flex items-center gap-2"
                 href="/career"
