@@ -7,7 +7,7 @@ import { SidebarTrigger } from './ui/sidebar'
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between gap-2 px-6 py-3 justify-self-start self-start w-full z-[9999]">
+    <header className="flex items-center max-w-7xl mx-auto justify-between gap-2 px-6 py-3 justify-self-start self-start w-full z-[9999]">
       <Link href="/">
         <Image src={logoImg} width={100} height={100} alt="Jean Martins logo" />
       </Link>
