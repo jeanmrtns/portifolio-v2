@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Inter as FontSans } from 'next/font/google'
 
-import '@/styles/globals.css'
+import '../app/globals.css'
 
 import { cn } from '@/lib/utils'
 import { Header } from '@/components/header'
@@ -9,6 +9,8 @@ import { Footer } from '@/components/footer'
 import { Cmdk } from '@/components/cmdk'
 import { ThemeProvider } from '@/providers/theme-provider'
 import { Metadata } from 'next'
+import { SidebarProvider } from '@/components/ui/sidebar'
+import { AppSidebar } from '@/components/app-sidebar'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
@@ -40,16 +42,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen flex flex-col justify-between items-center">
-            <Header />
+          <SidebarProvider>
+            <div className="min-h-screen w-full flex flex-col justify-between items-center">
+              <Header />
 
-            <div>
-              {children}
-              <Cmdk />
+              <div>
+                {children}
+                <Cmdk />
+              </div>
+
+              <Footer />
             </div>
 
-            <Footer />
-          </div>
+            <div className="block md:hidden">
+              <AppSidebar />
+            </div>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>

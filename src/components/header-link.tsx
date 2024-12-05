@@ -8,7 +8,7 @@ interface HeaderLinkProps {
 export function HeaderLink({ title, href }: HeaderLinkProps) {
   return (
     <Link
-      className="text-sm text-ring hover:text-primary transition-colors"
+      className="text-xs md:text-sm text-ring hover:text-primary transition-colors"
       href={href}
     >
       {title}
