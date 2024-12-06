@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { Inter as FontSans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 
 import '../app/globals.css'
 
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
           </SidebarProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
